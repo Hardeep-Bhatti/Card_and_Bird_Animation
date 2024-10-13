@@ -1,0 +1,74 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    width: 0;
+}
+
+body
+{
+    height: 100vh;
+    width: 100vw;
+}
+
+.element-01
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 500px;
+}
+
+.element-01-02
+{
+    width: 35%;
+    aspect-ratio: 1 / 1;
+    background-image: url('digital-art-style-illustration-thunderstorm.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s linear;
+    box-shadow: 0 0 0.1rem 0.2rem black,
+    0 0 0.3rem 0.4rem whitesmoke,
+    0 0 0.5rem 0.6rem black;
+    cursor: pointer;
+}
+
+.element-01-02:hover
+{
+    transform: rotateY(30deg);
+
+    .element-01-03
+    {
+        transform: translateY(-30%);
+        animation: bird_animation 0.3s linear 1s infinite both;
+    }
+}
+
+.element-01-03
+{
+    width: 30%;
+    aspect-ratio: 1 / 1;
+    background-image: url(bird1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 1s linear;
+}
+
+@keyframes bird_animation
+{
+    from
+    {
+        background-image: url('bird1.png');
+    }
+
+    to
+    {
+        background-image: url('bird2.png');
+    }
+}
